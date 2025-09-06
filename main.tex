@@ -1,0 +1,238 @@
+\documentclass[twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[most]{tcolorbox}
+\usepackage[table]{xcolor}
+
+
+\definecolor{mygrey}{HTML}{ebebeb}
+\definecolor{myblue}{HTML}{21436c}
+
+
+\tcbset{
+innerBox/.style={
+  colback=white,
+  colframe=white,
+  bicolor,
+  sharp corners,
+  colbacklower=mygrey,   % gray lower background  % title uses Inter
+  fontupper= \small, %\interfont,             % upper content uses Inter
+  fontlower= \large,%\jetbrains
+}}
+
+\tcbset{
+titleBox/.style={
+  enhanced,  
+  %fonttitle=\interfont\bfseries, 
+  colback=white,
+  colframe=white,
+  boxrule=0pt,
+  colbacktitle=myblue,
+  coltitle=white,
+  left=0pt, right=0pt, top=0pt, bottom=0pt, % content padding
+  attach boxed title to top center={yshift=1mm}, % optional: title offset
+  boxed title style={colback=myblue, boxrule=0pt, size=normal, boxsep=1mm} % padding for title
+}}
+
+\tcbset{
+splitBox/.style={
+    listing side text,
+    colback=white,
+    colframe=white,
+    sharp corners,
+    sidebyside,
+    boxrule=1pt,
+    skin=bicolor,
+    colback=gray!10,
+    colbacklower=white,
+    valign=center,
+    top=2pt, bottom=2pt, left=2pt, right=2pt
+}}
+
+
+
+
+\begin{document}
+
+%-------------------------
+%   SETUP
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=SETUP]
+% --- first inner box ---
+\begin{tcolorbox}[innerBox]
+Download an existing repository
+\tcblower
+\$ git clone $<$\textit{name}$>$
+\end{tcolorbox}
+
+% --- second inner box ---
+\begin{tcolorbox}[innerBox]
+Create new Local repository in current directory
+\tcblower
+\$git init
+\end{tcolorbox}
+
+% --- third inner box ---
+\begin{tcolorbox}[innerBox]
+Create new Local repository in \textit{project name} directory
+\tcblower
+\$git init $<$\textit{project name}$>$
+\end{tcolorbox}
+
+% --- fourth inner box ---
+\begin{tcolorbox}[innerBox]
+Add upstream for local repository.
+\tcblower
+\$ git remote add origin $<$\textit{link to Git hosting service}$>$
+\end{tcolorbox}
+\end{tcolorbox}
+
+
+%-------------------------
+%   SNAPSHOT
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=SNAPSHOT]
+% --- first inner box ---
+\begin{tcolorbox}[innerBox]
+Download an existing repository
+\tcblower
+\$ git status
+\end{tcolorbox}
+
+% --- second inner box ---
+\begin{tcolorbox}[innerBox]
+Create new Local repository in current directory
+\tcblower
+\$git diff
+\end{tcolorbox}
+
+\begin{tcolorbox}[splitBox, lefthand ratio=0.25, fontupper = \small, fontlower = \small]
+\texttt{--}  staged 
+\vspace{3mm}
+
+HEAD
+\tcblower
+staged changes vs last commit
+\par\vspace{3mm}
+working directory vs last commit
+
+\end{tcolorbox}
+\end{tcolorbox}
+
+
+%-------------------------
+%   Branches & Tags
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=BRANCHES \& TAGS]
+% --- first inner box ---
+\begin{tcolorbox}[innerBox]
+Show local branches
+\tcblower
+\$ git branch
+\end{tcolorbox}
+\begin{tcolorbox}[splitBox, lefthand ratio=0.30, fontupper = \small, fontlower = \small]
+\texttt{-} a 
+\vspace{4mm}
+
+\texttt{-} v
+\vspace{4mm}
+
+$<$\textit{newbranch}$>$
+\vspace{1mm}
+
+- d $<$\textit{branch}$>$
+
+\tcblower
+also shows remote branches
+\par\vspace{3mm}
+additionally shows last commit on each branch
+\par\vspace{3mm}
+creates a new branch based on curretn HEAD
+\par\vspace{2mm}
+deletes a local branch
+
+\end{tcolorbox}
+
+% --- second inner box ---
+\begin{tcolorbox}[innerBox]
+Switch HEAD branch
+\tcblower
+\$git switch $<$\textit{branch}$>$
+\end{tcolorbox}
+
+\begin{tcolorbox}[splitBox, lefthand ratio=0.38, fontupper = \small, fontlower = \small]
+\texttt{--}track origin/feature-x 
+\vspace{9mm}
+
+- c $<$\textit{newbranch}$>$
+\tcblower
+creates local branch feature-x that tracks origin/feature-x. \par\textcolor{red}{\textbf{NOTE}}: It does not create a remote branch!
+\par\vspace{3mm}
+create a new branch and switch to it
+
+\end{tcolorbox}
+\begin{tcolorbox}[    
+    colback=white,
+    colframe=orange,
+    ]
+        \textcolor{red}{\textbf{NOTE}}: \textit{git checkout} can perform these tasks as well, however works slightly differently and is generally overloaded with a bunch of other features.
+\end{tcolorbox}
+
+% --- third inner box ---
+\begin{tcolorbox}[innerBox]
+Mark the current commit with a tag
+\tcblower
+\$ git tag $<$\textit{tag-name}$>$
+\end{tcolorbox}
+\end{tcolorbox}
+
+%-------------------------
+%   Local Changes
+%-------------------------
+git add <file>
+git add .
+git add -p <file>
+git commit -m "<message>"
+git commit -am "<message"
+git commit -amend 
+
+
+%-------------------------
+%   Update & Publish
+%-------------------------
+Git remote add <alias> <url>
+git fetch <alias>
+Git fetch <alias>/<branch>
+git pull
+git push <alias>/<branch>
+
+
+%-------------------------
+%   Merge & Rebase
+%-------------------------
+git merge <branch>
+git rebase <branch>
+
+%-------------------------
+%   Temporary Commits
+%-------------------------
+Git stash
+Git stash list
+Git stash apply
+Git stash pop
+Git stash drop
+
+%-------------------------
+%   Tracking Path Changes
+%-------------------------
+Git rm <file>
+git mv <stig-path> <new-path>
+
+
+%-------------------------
+%   Undo
+%-------------------------
+git reset <file>
+git reset --hard <commit>
+
+\end{document}
