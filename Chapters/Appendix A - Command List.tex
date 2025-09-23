@@ -1,0 +1,252 @@
+\chapter{Command List}
+\twocolumn
+
+%-------------------------
+%   SETUP
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=SETUP]
+% --- first inner box ---
+    \begin{tcolorbox}[innerBox]
+        Download an existing repository
+      \tcblower
+        \$ git clone $<$\textit{name}$>$
+    \end{tcolorbox}
+
+% --- second inner box ---
+    \begin{tcolorbox}[innerBox]
+        Create new Local repository in current directory
+      \tcblower
+        \$git init
+    \end{tcolorbox}
+    
+% --- third inner box ---
+    \begin{tcolorbox}[innerBox]
+        Create new Local repository in \textit{project name} directory
+      \tcblower
+        \$git init $<$\textit{project name}$>$
+    \end{tcolorbox}
+
+% --- fourth inner box ---
+    \begin{tcolorbox}[innerBox]
+        Add upstream for local repository.
+      \tcblower
+        \$ git remote add origin $<$\textit{link to Git hosting service}$>$
+    \end{tcolorbox}
+\end{tcolorbox}
+
+
+%-------------------------
+%   SNAPSHOT
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=SNAPSHOT]
+% --- first inner box ---
+    \begin{tcolorbox}[innerBox]
+        Download an existing repository
+      \tcblower
+        \$ git status
+    \end{tcolorbox}
+
+% --- second inner box ---
+    \begin{tcolorbox}[innerBox]
+        Create new Local repository in current directory
+      \tcblower
+        \$git diff
+    \end{tcolorbox}
+        
+    \begin{tcolorbox}[splitBox, lefthand ratio=0.25, fontupper = \small, fontlower = \small]
+        \texttt{--}  staged 
+        \par\vspace{3mm}
+        HEAD
+      \tcblower
+        staged changes vs last commit
+        \par\vspace{3mm}
+        working directory vs last commit
+    \end{tcolorbox}
+\end{tcolorbox}
+
+
+%-------------------------
+%   Branches & Tags
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=BRANCHES \& TAGS]
+% --- first inner box ---
+    \begin{tcolorbox}[innerBox]
+        Show local branches
+      \tcblower
+        \$ git branch
+    \end{tcolorbox}
+    \begin{tcolorbox}[splitBox, lefthand ratio=0.30, fontupper = \small, fontlower = \small]
+        \texttt{-}\hspace{0.5mm}a 
+        \par\vspace{4mm}
+        \texttt{-}\hspace{0.5mm}v
+        \par\vspace{4mm}
+        $<$\textit{newbranch}$>$
+        \par\vspace{4mm}
+        \texttt{-}\hspace{0.5mm}d $<$\textit{branch}$>$
+      \tcblower
+        also shows remote branches
+        \par\vspace{2mm}
+        additionally shows last commit on each branch
+        \par\vspace{2mm}
+        creates a new branch based on curretn HEAD
+        \par\vspace{2mm}
+        deletes a local branch
+    \end{tcolorbox}
+
+% --- second inner box ---
+    \begin{tcolorbox}[innerBox]
+        Switch HEAD branch
+      \tcblower
+        \$git switch $<$\textit{branch}$>$
+    \end{tcolorbox}
+    \begin{tcolorbox}[splitBox, lefthand ratio=0.38, fontupper = \small, fontlower = \small]
+        \texttt{--}\hspace{0.5mm}track origin/feature-x 
+        \par\vspace{9mm}
+        \texttt{-}\hspace{0.5mm}c $<$\textit{newbranch}$>$
+      \tcblower
+        creates local branch feature-x that tracks origin/feature-x. \par\textcolor{red}{\textbf{NOTE}}: It does not create a remote branch!
+        \par\vspace{3mm}
+        create a new branch and switch to it
+    \end{tcolorbox}
+    \begin{tcolorbox}[infoBox]
+        \textcolor{red}{\textbf{NOTE}}: \textit{git checkout} can perform these tasks as well, however works slightly differently and is generally overloaded with a bunch of other features.
+    \end{tcolorbox}
+
+% --- third inner box ---
+    \begin{tcolorbox}[innerBox]
+        Mark the current commit with a tag
+      \tcblower
+        \$ git tag $<$\textit{tag-name}$>$
+    \end{tcolorbox}
+        
+% --- fourth inner box ---
+    \begin{tcolorbox}[innerBox]
+        Push a tag to a remote
+      \tcblower
+        \$ git push origin tag $<$\textit{tag-name}$>$
+    \end{tcolorbox}
+\end{tcolorbox}
+
+%-------------------------
+%   Local Changes
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=LOCAL CHANGES]
+% --- first inner box ---
+    \begin{tcolorbox}[innerBox]
+        adds files to be tracked
+      \tcblower
+        \$ git add $<$file$>$
+    \end{tcolorbox}
+    \begin{tcolorbox}[splitBox, lefthand ratio=0.30, fontupper = \small, fontlower = \small]
+        \texttt . 
+        \par\vspace{3mm}
+        \texttt{-}\hspace{0.5mm}p $<$file$>$
+      \tcblower
+        adds all untracked files
+        \par\vspace{3mm}
+        ???
+    \end{tcolorbox}
+
+% --- second inner box ---
+    \begin{tcolorbox}[innerBox]
+        Commit changes and add a message
+    \tcblower
+        \$git commit -m "$<$message$>$"
+    \end{tcolorbox}
+    
+    \begin{tcolorbox}[splitBox, lefthand ratio=0.42, fontupper = \small, fontlower = \small]
+        \texttt{-}\hspace{0.5mm}am "$<$message$>$"
+        \par\vspace{3mm}
+        \texttt{-}ammend
+      \tcblower
+        add \& commit in one go
+        \par\vspace{3mm}
+        change something in a commit ???
+    \end{tcolorbox}
+\end{tcolorbox}
+
+
+%-------------------------
+%   Update & Publish
+%-------------------------
+Git remote add <alias> <url>
+git fetch <alias>
+Git fetch <alias>/<branch>
+git pull
+git push <alias>/<branch>
+
+
+%-------------------------
+%   Merge & Rebase
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=MERGE \& REBASE]
+% --- first inner box ---
+    \begin{tcolorbox}[innerBox]
+        merge current branch into target branch???
+      \tcblower
+        \$ git merge $<$branch$>$
+    \end{tcolorbox}
+
+% --- second inner box ---
+    \begin{tcolorbox}[innerBox]
+        Change the history...
+    \tcblower
+        \$git rebase $<$branch$>$
+    \end{tcolorbox}
+\end{tcolorbox}
+
+%-------------------------
+%   Temporary Commits
+%-------------------------
+Git stash
+Git stash list
+Git stash apply
+Git stash pop
+Git stash drop
+
+%-------------------------
+%   Tracking Path Changes
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=TRACKING PATH CHANGES]
+% --- first inner box ---
+    \begin{tcolorbox}[innerBox]
+        removes stated file
+      \tcblower
+        \$ git rm $<$file$>$
+    \end{tcolorbox}
+
+% --- second inner box ---
+    \begin{tcolorbox}[innerBox]
+        ???
+    \tcblower
+        \$git mv $<$stig-path$>$ $<$new-path$>$
+    \end{tcolorbox}
+\end{tcolorbox}
+
+
+%-------------------------
+%   Undo
+%-------------------------
+\begin{tcolorbox}[ titleBox, title=UNDO]
+% --- first inner box ---
+    \begin{tcolorbox}[innerBox]
+        ???
+      \tcblower
+        \$ git reset $<$file$>$
+    \end{tcolorbox}
+
+% --- second inner box ---
+    \begin{tcolorbox}[innerBox]
+        ???
+    \tcblower
+        \$git reset --hard $<$file$>$
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[infoBox]
+    
+    Here is some information text inside a styled box.  
+    Line breaks and math also work: \( E = mc^2 \).
+    
+    \end{tcolorbox}
+
+\end{tcolorbox}

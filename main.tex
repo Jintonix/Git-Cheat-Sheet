@@ -1,238 +1,136 @@
-\documentclass[twocolumn]{article}
+% -- TODO --
+% 1. Adjust footer: 
+%   width between footers,
+%   Spacing before footers -> have there be a gap but the line continues where the other lines also start
+%   Numbering
+% -- END --
+
+\documentclass{report}
+
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=3.6cm]{geometry}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx} % Required for inserting images
 \usepackage[most]{tcolorbox}
-\usepackage[table]{xcolor}
+\tcbuselibrary{listings,minted}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{xcolor}
+%\setlength{\parindent}{0pt} %Globally disable parapgraph indents
+\usepackage{fontawesome5} % for the info icon
+\usepackage{bookmark}
+\usepackage{hyperref} %always load last
+
+% --- Document settings ---
+\linespread{1.1} %space between lines
 
 
-\definecolor{mygrey}{HTML}{ebebeb}
-\definecolor{myblue}{HTML}{21436c}
+% --- Hyperref customization ---
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,    % section links
+  citecolor=green,  % citations
+  urlcolor=blue,  % urls
+  backref=page
+}
 
+% --- Color definitions ---
+\definecolor{grayframe}{gray}{0.8}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{lightgreen}{rgb}{0.5,0.8,0.5}
 
-\tcbset{
-innerBox/.style={
-  colback=white,
-  colframe=white,
-  bicolor,
-  sharp corners,
-  colbacklower=mygrey,   % gray lower background  % title uses Inter
-  fontupper= \small, %\interfont,             % upper content uses Inter
-  fontlower= \large,%\jetbrains
-}}
+%inject macro file
+\input{macros}
 
-\tcbset{
-titleBox/.style={
-  enhanced,  
-  %fonttitle=\interfont\bfseries, 
-  colback=white,
-  colframe=white,
-  boxrule=0pt,
-  colbacktitle=myblue,
-  coltitle=white,
-  left=0pt, right=0pt, top=0pt, bottom=0pt, % content padding
-  attach boxed title to top center={yshift=1mm}, % optional: title offset
-  boxed title style={colback=myblue, boxrule=0pt, size=normal, boxsep=1mm} % padding for title
-}}
-
-\tcbset{
-splitBox/.style={
-    listing side text,
-    colback=white,
-    colframe=white,
-    sharp corners,
-    sidebyside,
-    boxrule=1pt,
-    skin=bicolor,
-    colback=gray!10,
-    colbacklower=white,
-    valign=center,
-    top=2pt, bottom=2pt, left=2pt, right=2pt
-}}
-
-
-
+\title{Git workflow cheat sheet}
+\author{Janek Schneider}
+\date{August 2025}
 
 \begin{document}
+\maketitle
+%----------------------
+%   Example Code Blocks
+%----------------------
 
-%-------------------------
-%   SETUP
-%-------------------------
-\begin{tcolorbox}[ titleBox, title=SETUP]
-% --- first inner box ---
-\begin{tcolorbox}[innerBox]
-Download an existing repository
+\chapter*{Example Code}
+\vspace{1em} % or try 2em or 1cm for more space
+
+
+\begin{lstlisting}[style=python-clean, caption={Example Python code}]
+class Agent:
+    def __init__(self, state):
+        self.state = state  # initialize agent state
+
+    def act(self, observation):
+        if observation == "hungry":
+            return "eat"
+        else:
+            return "wait"
+\end{lstlisting}
+
+
+\begin{tcolorbox}[splitBox, listing engine=minted]
+\$ git init\\
+git add .\\
+git commit -m "First commit and some other stuff."\\
 \tcblower
-\$ git clone $<$\textit{name}$>$
+This sequence initializes a new repository, stages all files, and commits them.
 \end{tcolorbox}
 
-% --- second inner box ---
-\begin{tcolorbox}[innerBox]
-Create new Local repository in current directory
+\begin{tcolorbox}[splitBoxCode, title=Example]
+
+% Left side: code (minted)
+\begin{tcblisting}{
+    listing engine=minted,
+    minted language=bash,
+    listing only,
+    enhanced,
+    frame hidden,
+    colback=gray!10,
+    boxrule=0pt
+}
+echo "Hello World"
+mkdir /c
+\end{tcblisting}
+
+% Right side: normal text
 \tcblower
-\$git init
+Some explanatory text goes here.
 \end{tcolorbox}
 
-% --- third inner box ---
-\begin{tcolorbox}[innerBox]
-Create new Local repository in \textit{project name} directory
-\tcblower
-\$git init $<$\textit{project name}$>$
-\end{tcolorbox}
+\begin{lstlisting}
+$ git commit -m "Initial commit"
+$ git push origin main -a
+$ git status
+\end{lstlisting}
 
-% --- fourth inner box ---
-\begin{tcolorbox}[innerBox]
-Add upstream for local repository.
-\tcblower
-\$ git remote add origin $<$\textit{link to Git hosting service}$>$
-\end{tcolorbox}
-\end{tcolorbox}
+\begin{gitBashBox}
+commit -m "someting"
+add -a
+\end{gitBashBox}
 
+%----------------------
+%   Paper Start
+%----------------------
+\begingroup
+\linespread{1}\selectfont
+\tableofcontents
+\endgroup
 
-%-------------------------
-%   SNAPSHOT
-%-------------------------
-\begin{tcolorbox}[ titleBox, title=SNAPSHOT]
-% --- first inner box ---
-\begin{tcolorbox}[innerBox]
-Download an existing repository
-\tcblower
-\$ git status
-\end{tcolorbox}
+\include{Chapters/Ch0 - The Basics}
+\include{Chapters/Ch1 - Creation}
+\include{Chapters/Ch2 - Cloning}
+\include{Chapters/Ch3 - Branch}
+\include{Chapters/Ch4 - Merging}
+\include{Chapters/Ch5 - Rebasing}
+\include{Chapters/Ch6 - Fetch & Pull}
+\include{Chapters/Ch7 - Tracking Path Changes}
 
-% --- second inner box ---
-\begin{tcolorbox}[innerBox]
-Create new Local repository in current directory
-\tcblower
-\$git diff
-\end{tcolorbox}
-
-\begin{tcolorbox}[splitBox, lefthand ratio=0.25, fontupper = \small, fontlower = \small]
-\texttt{--}  staged 
-\vspace{3mm}
-
-HEAD
-\tcblower
-staged changes vs last commit
-\par\vspace{3mm}
-working directory vs last commit
-
-\end{tcolorbox}
-\end{tcolorbox}
-
-
-%-------------------------
-%   Branches & Tags
-%-------------------------
-\begin{tcolorbox}[ titleBox, title=BRANCHES \& TAGS]
-% --- first inner box ---
-\begin{tcolorbox}[innerBox]
-Show local branches
-\tcblower
-\$ git branch
-\end{tcolorbox}
-\begin{tcolorbox}[splitBox, lefthand ratio=0.30, fontupper = \small, fontlower = \small]
-\texttt{-} a 
-\vspace{4mm}
-
-\texttt{-} v
-\vspace{4mm}
-
-$<$\textit{newbranch}$>$
-\vspace{1mm}
-
-- d $<$\textit{branch}$>$
-
-\tcblower
-also shows remote branches
-\par\vspace{3mm}
-additionally shows last commit on each branch
-\par\vspace{3mm}
-creates a new branch based on curretn HEAD
-\par\vspace{2mm}
-deletes a local branch
-
-\end{tcolorbox}
-
-% --- second inner box ---
-\begin{tcolorbox}[innerBox]
-Switch HEAD branch
-\tcblower
-\$git switch $<$\textit{branch}$>$
-\end{tcolorbox}
-
-\begin{tcolorbox}[splitBox, lefthand ratio=0.38, fontupper = \small, fontlower = \small]
-\texttt{--}track origin/feature-x 
-\vspace{9mm}
-
-- c $<$\textit{newbranch}$>$
-\tcblower
-creates local branch feature-x that tracks origin/feature-x. \par\textcolor{red}{\textbf{NOTE}}: It does not create a remote branch!
-\par\vspace{3mm}
-create a new branch and switch to it
-
-\end{tcolorbox}
-\begin{tcolorbox}[    
-    colback=white,
-    colframe=orange,
-    ]
-        \textcolor{red}{\textbf{NOTE}}: \textit{git checkout} can perform these tasks as well, however works slightly differently and is generally overloaded with a bunch of other features.
-\end{tcolorbox}
-
-% --- third inner box ---
-\begin{tcolorbox}[innerBox]
-Mark the current commit with a tag
-\tcblower
-\$ git tag $<$\textit{tag-name}$>$
-\end{tcolorbox}
-\end{tcolorbox}
-
-%-------------------------
-%   Local Changes
-%-------------------------
-git add <file>
-git add .
-git add -p <file>
-git commit -m "<message>"
-git commit -am "<message"
-git commit -amend 
-
-
-%-------------------------
-%   Update & Publish
-%-------------------------
-Git remote add <alias> <url>
-git fetch <alias>
-Git fetch <alias>/<branch>
-git pull
-git push <alias>/<branch>
-
-
-%-------------------------
-%   Merge & Rebase
-%-------------------------
-git merge <branch>
-git rebase <branch>
-
-%-------------------------
-%   Temporary Commits
-%-------------------------
-Git stash
-Git stash list
-Git stash apply
-Git stash pop
-Git stash drop
-
-%-------------------------
-%   Tracking Path Changes
-%-------------------------
-Git rm <file>
-git mv <stig-path> <new-path>
-
-
-%-------------------------
-%   Undo
-%-------------------------
-git reset <file>
-git reset --hard <commit>
+\appendix
+\include{Chapters/Appendix A - Command List}
+\include{Chapters/Appendix B - Glossary}
 
 \end{document}
+

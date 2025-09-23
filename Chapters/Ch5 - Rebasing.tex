@@ -1,0 +1,40 @@
+\chapter{Rebasing}
+\section{Rebasing}
+Think of git rebase as lifting your commits off your current branch and then replaying them one by one on top of a new base (in this case, the updated main).
+
+- main has new commits from your colleague.
+
+- Your feature branch has your visualization commits.
+
+- Rebase takes your commits, temporarily removes them, updates your branch to look like main, then applies your commits on top, as if you started working after your colleague’s changes were already there.
+
+This gives you a clean, linear history.\\
+
+Okay so i just did a git rebase main, and I now have to resolve conflicts, HOWEVER I am looking at files I changed from an older commit, not the last changes I made and pushe,d why is that? Will those be updated at some point after the rebase?
+
+Yes — that’s exactly how rebase works 
+
+When you ran git rebase main, Git took all your commits (from where your branch diverged from main) and is now replaying them one by one on top of the updated main.
+
+So what you’re seeing now is:
+
+Git is currently applying one of your earlier commits (not the latest one).
+
+That commit touched a file that also changed in main, so you get a conflict.
+
+Once you fix it and git rebase --continue, Git will move on to the next commit, and so on, until it finally reapplies your most recent work.
+
+So:
+
+You’re not “losing” your latest changes — they just haven’t been replayed yet.
+
+You’ll resolve conflicts in the order your commits were originally made.
+
+At the end of the rebase, your branch will contain all your commits, sitting neatly on top of the updated main.
+
+Short version: You’re seeing older commits because rebase replays history from oldest to newest. Your latest changes will show up when their turn comes in the replay.
+
+Do you want me to sketch a mini example with commits (A–B–C vs. M–N on main) to show exactly why you’re resolving conflicts from earlier commits first?
+
+git push --force-with-lease\\
+must be used afterwards, because the new commit history is different than the one on the remote after rebasing.

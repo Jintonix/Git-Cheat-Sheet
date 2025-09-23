@@ -1,0 +1,31 @@
+\chapter{Branching}
+
+\section{Branching}
+To create one locally you use the command:\\
+\$git checkout -b my-feature\\
+This combines both:\\
+\$git branch my-feature → creates the branch\\
+\$git checkout my-feature → switches to it\\
+
+After that it needs to be pushed to the remote via:\\
+\$git push -u origin my-feature\\
+
+\section{Branch vs. Tag}
+Differences between Git tags and branches
+
+Tags and branches are both used for version control of your code base. Their functions complement each other, and they are designed to be used together.
+
+A branch is often used for new features and fixing bugs. It allows you to work without impacting the main codebase. Once your work is complete, you can incorporate your changes into the application by merging the branch back into the main codebase. This allows multiple people to work on different aspects of the project simultaneously. It also provides a way to experiment with new ideas without risking the main codebase’s stability.
+
+Unlike branches, tags are not intended for ongoing development. Tags mark a specific point in the repository’s history to give developers an easy way to reference important milestones in the development timeline.
+When to use branches
+
+Imagine that you want to add a new feature to a software project’s codebase but you aren’t sure if the new feature will work as expected. You want to experiment without affecting the main codebase.
+
+In this scenario, use a Git branch to create a separate line of development for the new feature. This avoids affecting the main codebase. Once the feature is complete and tested, you can merge the branch back into the main codebase. Depending on your organization’s process, you may choose to delete the branch to prevent clutter.
+When to use tags
+
+Now, suppose that you complete and test the new feature. You want to release the new software version to the users. In this case, use a Git tag to mark the current state of the codebase as a new version release.
+
+You can name the tag to reflect the version number (such as v1.2.3) and include a brief description of the changes in the release. This allows you to easily reference the specific version of the released codebase. It is also easy to roll back to the previous version if necessary.
+Using 

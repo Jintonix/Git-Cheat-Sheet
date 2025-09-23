@@ -1,0 +1,16 @@
+\chapter{Fetch \& Pull}
+\section{Fetch \& Pull}
+git fetch updates your local repository’s knowledge of the remote, not your working branch.\\
+fetch -> make sure your local Git knows about the latest main on the server.\\
+
+Git pull syntax:\\
+git pull <remote> <branch>
+\\
+For pulling into a branch while on a different branch:\\
+git fetch origin main:main\\
+git fetch <remote> <src>:<dst>\\
+- <remote> → which remote to fetch from (e.g. origin).
+
+- <src> → branch (or ref) on the remote.
+
+- <dst> → branch (or ref) in your local repo to update.

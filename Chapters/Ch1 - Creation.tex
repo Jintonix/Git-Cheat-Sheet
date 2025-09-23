@@ -1,0 +1,29 @@
+\chapter{Creation}
+
+\section{How to create a project using Git}
+Option 1.\\
+Go to your Git hosting service of choise and create a project. Initialize a repo and then clone it to your local.
+\\\\
+Option 2.\\
+Create a project locally. Then either run:\\
+A) Git init - which creates a repository in the folder you are currently in\\
+or\\
+B) Git init <name> - which basically does mkdir <name> git init <name> for a folder in the directory you are in.\\
+\\
+Then go to you Git hosting service of choice and create a project.\\
+Push your local to that project.\\
+\\\\
+\$ git remote add origin git@github.com:Jintonix/Git-Cheat-Sheet.git \\
+\$ git branch -M main\\
+\$ git push -u origin main\\
+
+\subsection{Changing upstream}
+asdsd
+
+\subsection{How to clone a repository}
+\$ git clone \textit{url}\\
+This creates a repository in a new dir in your cwd named after the project in your Git hosting service.\\
+\$ git clone \textit{url} myFolder\\
+Does the same, but replaces the project name with a specific one you set.\\
+\$ git clone \textit{url} .\\
+Creates the repository in your cwd.

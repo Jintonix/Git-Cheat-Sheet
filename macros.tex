@@ -1,0 +1,153 @@
+% --- Define gitbash language ---
+\lstdefinelanguage{gitbash}{
+    keywords={commit,push, status, add, diff, rm},
+    keywordstyle=\color{orange}\bfseries,
+    %keywords not needed as long as preloading works
+    %morekeywords=[2]{\$,git},
+    %keywordstyle=[2]\color{green}\bfseries,
+    morekeywords=[3]{-a,-m,-s,--short},
+    keywordstyle=[3]\color{green}\bfseries,
+    morekeywords=[4]{<file>, <file_from>,<file_to>},
+    keywordstyle=[4]\itshape,
+    alsoletter={-,<,>}
+}
+
+\lstset{
+    basicstyle=\ttfamily,
+    language=gitbash,
+    columns=fullflexible
+}
+
+% --- tcolorbox styles ---
+\tcbset{
+splitBox/.style={
+    listing engine=minted,
+    minted language=bash,
+    listing side text,
+    sidebyside,
+    boxrule=1pt,
+    skin=bicolor,
+    colback=gray!10,
+    colbacklower=white,
+    valign=center,
+    top=2pt, bottom=2pt, left=2pt, right=2pt
+}}
+
+\tcbset{
+splitBoxCode/.style={
+    sidebyside,
+    sidebyside gap=5mm,
+    listing engine=minted,
+    minted language=bash,
+    listing only,
+    boxrule=1pt,
+    skin=bicolor,
+    colback=gray!10,
+    colbacklower=white,
+    valign=center,
+    top=2pt, bottom=2pt, left=2pt, right=2pt
+}}
+
+\lstdefinestyle{python-clean}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    frame=single,
+    rulecolor=\color{grayframe},
+    breaklines=true,
+    captionpos=b,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{darkblue}\bfseries,
+    commentstyle=\color{darkgreen}\itshape,
+    stringstyle=\color{darkred},
+    tabsize=4,
+    showstringspaces=false,
+    emph={self,True,False,None}, % extra highlighting
+    emphstyle=\color{blue}
+}
+
+% --- tcblisting styles ---
+\newtcblisting{gitBashBox} {
+    colback=black,
+    colupper=white,
+    listing engine = listings,
+    listing only,
+    listing options={
+        style=tcblatex,
+        language=gitbash},
+    every listing line={
+    \textcolor{white}{\small\ttfamily\bfseries 
+    \$git }},
+    sharp corners
+}
+
+% --- Create inline code boxes ---
+%use: ... \gitinline{} ...
+\newcommand{\gitinline}[1]{%
+  \colorbox{black}{\textcolor{white}{\lstinline!#1!}}%
+}
+
+
+%-------------------------
+%   Macros for Apendix A
+%-------------------------
+\definecolor{mygrey}{HTML}{ebebeb}
+\definecolor{myblue}{HTML}{21436c}
+
+
+\tcbset{
+innerBox/.style={
+  colback=white,
+  colframe=white,
+  bicolor,
+  sharp corners,
+  colbacklower=mygrey,   % gray lower background  % title uses Inter
+  fontupper= \small, %\interfont,             % upper content uses Inter
+  fontlower= \large,%\jetbrains
+}}
+
+\tcbset{
+titleBox/.style={
+  enhanced,  
+  %fonttitle=\interfont\bfseries, 
+  colback=white,
+  colframe=white,
+  boxrule=0pt,
+  colbacktitle=myblue,
+  coltitle=white,
+  left=0pt, right=0pt, top=0pt, bottom=0pt, % content padding
+  attach boxed title to top center={yshift=1mm}, % optional: title offset
+  boxed title style={colback=myblue, boxrule=0pt, size=normal, boxsep=1mm} % padding for title
+}}
+
+\tcbset{
+splitBox/.style={
+    listing side text,
+    colback=white,
+    colframe=white,
+    sharp corners,
+    sidebyside,
+    boxrule=1pt,
+    skin=bicolor,
+    colback=gray!10,
+    colbacklower=white,
+    valign=center,
+    top=2pt, bottom=2pt, left=2pt, right=2pt
+    %somehow we need to make the left side have a smaller right hand margin
+}}
+
+\tcbset{
+infoBox/.style={
+    colback={red!10},   % light peach background
+    left=10mm, right=2mm, top=2mm, bottom=2mm, % padding
+    boxrule=0pt,              % no full box border
+    borderline west={2pt}{0pt}{red}, % only left border
+    enhanced,                 % enable advanced options
+    drop shadow,
+    rounded corners,
+    overlay={
+    \node[anchor=north west, xshift=3mm, yshift=-2mm] at (frame.north west)
+    {
+    \textcolor{red}{\faInfoCircle}};
+    }
+}}
