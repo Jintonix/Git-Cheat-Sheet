@@ -1,15 +1,17 @@
 % --- Define gitbash language ---
 \lstdefinelanguage{gitbash}{
-    keywords={commit,push, status, add, diff, rm},
+    keywords={commit,push, status, add, diff, rm, switch, stash, pop, clone, init, branch},
     keywordstyle=\color{orange}\bfseries,
     %keywords not needed as long as preloading works
     %morekeywords=[2]{\$,git},
     %keywordstyle=[2]\color{green}\bfseries,
-    morekeywords=[3]{-a,-m,-s,--short},
+    morekeywords=[3]{-a,-c,-m,-s,--short,-M,-u},
     keywordstyle=[3]\color{green}\bfseries,
-    morekeywords=[4]{<file>, <file_from>,<file_to>},
+    morekeywords=[4]{<file>, <file_from>,<file_to>, <branch>, <new_branch>, <url>},
     keywordstyle=[4]\itshape,
-    alsoletter={-,<,>}
+    morekeywords=[5]{mkdir},
+    keywordstyle=[5]\color{red}\bfseries,
+    alsoletter={-,<,>},
 }
 
 \lstset{
@@ -84,7 +86,7 @@ splitBoxCode/.style={
 % --- Create inline code boxes ---
 %use: ... \gitinline{} ...
 \newcommand{\gitinline}[1]{%
-  \colorbox{black}{\textcolor{white}{\lstinline!#1!}}%
+  \colorbox{black}{\textcolor{white}{\$\lstinline!#1!}}%
 }
 
 

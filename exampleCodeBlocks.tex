@@ -1,0 +1,60 @@
+%----------------------
+%   Example Code Blocks
+%----------------------
+
+\chapter*{Example Code}
+\vspace{1em} % or try 2em or 1cm for more space
+
+
+\begin{lstlisting}[style=python-clean, caption={Example Python code}]
+class Agent:
+    def __init__(self, state):
+        self.state = state  # initialize agent state
+
+    def act(self, observation):
+        if observation == "hungry":
+            return "eat"
+        else:
+            return "wait"
+\end{lstlisting}
+
+
+\begin{tcolorbox}[splitBox, listing engine=minted]
+\$ git init\\
+git add .\\
+git commit -m "First commit and some other stuff."\\
+\tcblower
+This sequence initializes a new repository, stages all files, and commits them.
+\end{tcolorbox}
+
+\begin{tcolorbox}[splitBoxCode, title=Example]
+
+% Left side: code (minted)
+\begin{tcblisting}{
+    listing engine=minted,
+    minted language=bash,
+    listing only,
+    enhanced,
+    frame hidden,
+    colback=gray!10,
+    boxrule=0pt
+}
+echo "Hello World"
+mkdir /c
+\end{tcblisting}
+
+% Right side: normal text
+\tcblower
+Some explanatory text goes here.
+\end{tcolorbox}
+
+\begin{lstlisting}
+$ git commit -m "Initial commit"
+$ git push origin main -a
+$ git status
+\end{lstlisting}
+
+\begin{gitBashBox}
+commit -m "someting"
+add -a
+\end{gitBashBox}

@@ -1,5 +1,5 @@
 \chapter{The Basics}
-
+\chapteroverlay
 \section{File states}
 Git has three main states that your files can reside in: \textit{modified}, \textit{staged}, and \textit{committed}:
 \begin{enumerate}
@@ -43,6 +43,7 @@ status
 \noindent If \textit{git status} is too vague, use \gitinline{git diff} it shows changes between your working directory and the staging area. \textbf{→ unstaged changes}\newline
 \gitinline{git diff --staged} and \gitinline{git diff --cached}\hspace{1mm}\footnotemark\hspace{0.2mm} will shows changes between the staging area and the last commit.  \textbf{→ staged changes}
 
+If you have a newly untracked directory with a bunch of untracked files \gitinline{git diff} will only show you the untracked directory, not all the files inside that aren't tracked either. To see these you can \gitinline{dit diff -uall}, which is short for \gitinline{git diff --untracked-files=all}.
 \subsection{Tracking and Staging}
 \noindent Track and stage new files using:
 \begin{gitBashBox}
@@ -59,6 +60,30 @@ commit -m "message"
 This allows us to skip the editor step and type up our comment in the editor itself.\newline
 
 If you want to skip the staging are, one can add the \gitinline{-a} flag. This will  also add all tracked files.
+
+\section{undo mistaken commit}
+1. Undo last commit but keep changes staged
+\begin{gitBashBox}
+git reset --soft HEAD~1
+\end{gitBashBox}
+
+2. Undo last commit and unstage changes
+\begin{gitBashBox}
+git reset --mixed HEAD~1
+\end{gitBashBox}
+
+3. Undo last commit and discard changes
+\begin{gitBashBox}
+git reset --hard HEAD~1
+\end{gitBashBox}
+
+\subsection{Undo when pushed}
+\begin{gitBashBox}
+revert <commit>
+\end{gitBashBox}
+Where <commit> is the commit hash.
+Use \gitinline{git log} or \gitinline{git log --oneline}.
+\gitinline{git --no-pager log} doesn't leave you in the pager, which you would normally equit with \textbf{q}.
 
 
 % --- Footnotes ---

@@ -18,12 +18,72 @@
 \usepackage{xcolor}
 %\setlength{\parindent}{0pt} %Globally disable parapgraph indents
 \usepackage{fontawesome5} % for the info icon
+\usepackage{fancyhdr}
 \usepackage{bookmark}
+\usepackage{tikz} %gives pixel level controll over things and adds \node \draw
+\usetikzlibrary{calc}
+\usepackage{titlesec}
 \usepackage{hyperref} %always load last
+
+% --- Color definitions ---
+\definecolor{grayframe}{gray}{0.8}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{lightgreen}{rgb}{0.5,0.8,0.5}
+\definecolor{lightblue}{RGB}{135 , 210, 250}
+\definecolor{orange}{RGB}{252, 202, 40}
 
 % --- Document settings ---
 \linespread{1.1} %space between lines
+\renewcommand{\textendash}{\rule[0.5ex]{1.2em}{0.5pt}}
 
+% --- Header & Footer settings ---
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[C]{\slshape \leftmark}
+\fancyfoot[CE,CO]{\textbf{\textendash} \textbf{\thepage} \textbf{\textendash}}
+\fancyfoot[RO,RE]{ \hspace{1mm} J. A. Schneider}
+
+\fancypagestyle{plain}{
+    \fancyhf{} % clear all footer & header fields
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[CE,CO]{\textbf{\textendash} \textbf{\thepage} \textbf{\textendash}}
+    \fancyfoot[RO,RE]{J. A. Schneider}
+}
+
+% --- Chapter format ---
+\titleformat{\chapter}[block] 
+  {\normalfont\color{orange}\fontsize{60}{60}\selectfont\bfseries} % title font
+  {}               % chapter number
+  {0pt}            % space between number and title
+  {     \begin{tikzpicture}[remember picture,overlay]
+            \node[anchor=north west,inner sep=0pt] at (current page.north west)
+                {\includegraphics[width=\paperwidth]{Images/chapter_bg_v3.7}};
+        \end{tikzpicture}
+   }               % code executed before title
+      
+\titlespacing*{\chapter}{3cm}{1.5cm}{-1cm}
+
+% --- Hook to place TikZ overlay on chapter page ---
+\newcommand{\chapteroverlay}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \coordinate (chref) at ($(current page.north west) + (2cm,-2cm)$);
+
+    % Big chapter number
+    \node[anchor=north west] (chnum) at ($(chref.west)+ (-1em,0em)$)
+      {\scalebox{5}{\color{orange} 0\thechapter}};
+      
+    % "Chapter" label under number
+    \node[anchor=north west] (chlabel) at ($(chnum.south west) + (0.4em,-1em)$)
+      {\large\color{orange} Chapter};
+    
+    % Vertical line
+    \draw[line width=4pt, color=orange] ($(chref) + (2cm,0)$) -- ++(0,-4.15cm) coordinate (linend);
+
+  \end{tikzpicture}%
+  \vspace*{2cm}
+}
 
 % --- Hyperref customization ---
 \hypersetup{
@@ -34,103 +94,41 @@
   backref=page
 }
 
-% --- Color definitions ---
-\definecolor{grayframe}{gray}{0.8}
-\definecolor{darkblue}{rgb}{0,0,0.5}
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-\definecolor{darkred}{rgb}{0.5,0,0}
-\definecolor{lightgreen}{rgb}{0.5,0.8,0.5}
-
 %inject macro file
 \input{macros}
 
-\title{Git workflow cheat sheet}
-\author{Janek Schneider}
-\date{August 2025}
 
 \begin{document}
-\maketitle
-%----------------------
-%   Example Code Blocks
-%----------------------
 
-\chapter*{Example Code}
-\vspace{1em} % or try 2em or 1cm for more space
-
-
-\begin{lstlisting}[style=python-clean, caption={Example Python code}]
-class Agent:
-    def __init__(self, state):
-        self.state = state  # initialize agent state
-
-    def act(self, observation):
-        if observation == "hungry":
-            return "eat"
-        else:
-            return "wait"
-\end{lstlisting}
-
-
-\begin{tcolorbox}[splitBox, listing engine=minted]
-\$ git init\\
-git add .\\
-git commit -m "First commit and some other stuff."\\
-\tcblower
-This sequence initializes a new repository, stages all files, and commits them.
-\end{tcolorbox}
-
-\begin{tcolorbox}[splitBoxCode, title=Example]
-
-% Left side: code (minted)
-\begin{tcblisting}{
-    listing engine=minted,
-    minted language=bash,
-    listing only,
-    enhanced,
-    frame hidden,
-    colback=gray!10,
-    boxrule=0pt
-}
-echo "Hello World"
-mkdir /c
-\end{tcblisting}
-
-% Right side: normal text
-\tcblower
-Some explanatory text goes here.
-\end{tcolorbox}
-
-\begin{lstlisting}
-$ git commit -m "Initial commit"
-$ git push origin main -a
-$ git status
-\end{lstlisting}
-
-\begin{gitBashBox}
-commit -m "someting"
-add -a
-\end{gitBashBox}
 
 %----------------------
 %   Paper Start
 %----------------------
 \begingroup
 \linespread{1}\selectfont
+\titleformat{\chapter}[block]{\normalfont\Huge\bfseries}{}{}{}
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
 \tableofcontents
 \endgroup
 
-\include{Chapters/Ch0 - The Basics}
-\include{Chapters/Ch1 - Creation}
-\include{Chapters/Ch2 - Cloning}
-\include{Chapters/Ch3 - Branch}
-\include{Chapters/Ch4 - Merging}
-\include{Chapters/Ch5 - Rebasing}
-\include{Chapters/Ch6 - Fetch & Pull}
-\include{Chapters/Ch7 - Tracking Path Changes}
+%\include*{exampleCodeBlocks}
 
+\include{Chapters/Ch1 - Creation}
+\include{Chapters/Ch2 - The Bascis}
+\include{Chapters/Ch3 - Branching}
+\include{Chapters/Ch4 - Merging}
+\include{Chapters/Ch4.1 - Solving Conflicts}
+\include{Chapters/Ch5 - Rebasing}
+\include{Chapters/Ch6 - Solving Conflicts}
+\include{Chapters/Ch7 - Fetch & Pull}
+\include{Chapters/Ch8 - Tracking Path Changes}
+
+\begingroup
+\titleformat{\chapter}[block]{\normalfont\Huge\bfseries}{}{}{}
+\titlespacing{\chapter}{0pt}{0pt}{0pt}
 \appendix
 \include{Chapters/Appendix A - Command List}
 \include{Chapters/Appendix B - Glossary}
-
+\endgroup
 \end{document}
 

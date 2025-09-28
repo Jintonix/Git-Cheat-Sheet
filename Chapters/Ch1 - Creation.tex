@@ -1,29 +1,27 @@
 \chapter{Creation}
-
+\chapteroverlay
 \section{How to create a project using Git}
-Option 1.\\
-Go to your Git hosting service of choise and create a project. Initialize a repo and then clone it to your local.
-\\\\
-Option 2.\\
-Create a project locally. Then either run:\\
-A) Git init - which creates a repository in the folder you are currently in\\
-or\\
-B) Git init <name> - which basically does mkdir <name> git init <name> for a folder in the directory you are in.\\
-\\
-Then go to you Git hosting service of choice and create a project.\\
-Push your local to that project.\\
-\\\\
-\$ git remote add origin git@github.com:Jintonix/Git-Cheat-Sheet.git \\
-\$ git branch -M main\\
-\$ git push -u origin main\\
+Create a project locally. Then run \gitinline{git init} -- which creates a repository in the folder you are currently in.\\
+Alternativley you can use \gitinline{git init <name>}  --which basically does \gitinline{mkdir <name>} and \gitinline{git init <name>} in one line and creates a folder in the directory you are in.\\
+
+\subsection{Connect to a Remote Repository}
+Once you have a git project set up locally, you will want to connect it to a remote host. Use the Git hosting service of your choosing and create a project. Then use the \textit{url} (either SSH or HTTP) and connect it to your local.
+\begin{gitBashBox}
+remote add origin <url>
+branch -M main
+push -u origin main
+\end{gitBashBox}
 
 \subsection{Changing upstream}
-asdsd
+\textbf{\textcolor{red}{WORK IN PROGRESS}}
 
 \subsection{How to clone a repository}
-\$ git clone \textit{url}\\
+Sometimes you want to work on an already existing project. 
+\begin{gitBashBox}
+clone <url>
+\end{gitBashBox}
 This creates a repository in a new dir in your cwd named after the project in your Git hosting service.\\
-\$ git clone \textit{url} myFolder\\
+\noindent\gitinline{git clone <url> myFolder}
 Does the same, but replaces the project name with a specific one you set.\\
-\$ git clone \textit{url} .\\
+\noindent\gitinline{git clone <url> .}
 Creates the repository in your cwd.
