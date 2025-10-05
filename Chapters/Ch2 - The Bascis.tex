@@ -8,14 +8,24 @@ Git has three main states that your files can reside in: \textit{modified}, \tex
     \item \textbf{Committed} means that the data is safely stored in your local database.
 \end{enumerate}
 
-    \textbf{ADD IMAGE OF WORKING DIRECTORY -> STAGING AREA -> GIT DIRECTORY }\newline
+\begin{figure}[H]
+\centering
+    \centering
+    \includegraphics[scale=1]{Images/recordingChanges.png}
+    \caption{recording Changes}
+\end{figure}
     
 \subsection{Lifecycle of file statuses}
 Each file in your working directory can be in one of two states: \textbf{tracked} or \textbf{untracked}. Tracked files are files that Git is aware of and were either in the last snapshot\footnotemark or are newly staged files.
 Tracked files can be \textit{unmodified}, \textit{modified}, or \textit{staged}. \newline
 While git knows about all files in your working directory, it will only \textit{watch} and record the history of \textbf{tracked} files.
 
-    \textbf{ADD IMAGE OF UNTRACKED -> UNMODIFIED -> MODIFIED -> STAGED}\newline
+\begin{figure}[H]
+\centering
+    \centering
+    \includegraphics[scale=1]{Images/workingTree.png}
+    \caption{Working tree}
+\end{figure}
 
 \section{Commit Lifecycle}
 The commit lifecycle begins by checking the state of files, then adding the desired files to the staging area, and finally committing them to the repository. Commits can also be pushed to a remote repository.
