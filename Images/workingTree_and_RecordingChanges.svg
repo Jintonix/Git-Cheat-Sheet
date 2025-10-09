@@ -24,14 +24,14 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="1.5357649"
-     inkscape:cx="315.80355"
-     inkscape:cy="575.28337"
+     inkscape:cx="321.98939"
+     inkscape:cy="564.21396"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g9" />
   <defs
      id="defs1">
     <inkscape:path-effect
@@ -465,6 +465,32 @@
        inkscape:export-filename="workingTree.png"
        inkscape:export-xdpi="199"
        inkscape:export-ydpi="199">
+      <g
+         id="g9"
+         inkscape:label="Tracked box">
+        <rect
+           style="display:inline;opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:#d7d7d7;stroke-width:0.541;stroke-opacity:1;paint-order:fill markers stroke;stroke-dasharray:3.24600005, 1.08200002;stroke-dashoffset:0"
+           id="rect2"
+           width="103.87273"
+           height="70.98101"
+           x="84.6446"
+           y="177.75745"
+           ry="1.6670456"
+           inkscape:export-filename="workingTree_tracked.png"
+           inkscape:export-xdpi="199"
+           inkscape:export-ydpi="199" />
+        <text
+           xml:space="preserve"
+           style="font-size:6.35px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#d7d7d7;fill-opacity:1"
+           x="136.54376"
+           y="247.01906"
+           id="text3"><tspan
+             sodipodi:role="line"
+             id="tspan3"
+             style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:Inter;-inkscape-font-specification:'Inter Medium Italic';stroke-width:0.264583;fill:#d7d7d7;fill-opacity:1"
+             x="136.54376"
+             y="247.01906">- Tracked -</tspan></text>
+      </g>
       <g
          id="g7-1"
          transform="translate(-17.712054,97.973925)"
