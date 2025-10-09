@@ -29,7 +29,6 @@
 *.nlo
 *.nls
 *.out
-*.pdf
 *.pyg
 *.run.xml
 *.snm
@@ -48,3 +47,5 @@
 *.listing
 build/
 _minted/
+test.pdf
+test.tex

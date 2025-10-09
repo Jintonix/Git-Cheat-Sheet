@@ -24,14 +24,14 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="1.5357649"
-     inkscape:cx="340.54692"
-     inkscape:cy="584.39934"
+     inkscape:cx="315.80355"
+     inkscape:cy="575.28337"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
-     inkscape:window-x="1072"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs1">
     <inkscape:path-effect
@@ -428,6 +428,23 @@
          d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
          id="path4-7-4-2" />
     </marker>
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect14-5-6-4"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,1,1,0,0.31802135,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="1"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="true"
+       hide_knots="false" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -441,6 +458,276 @@
        x="37.642738"
        y="31.064396"
        sodipodi:insensitive="true" />
+    <g
+       id="g2"
+       inkscape:label="Bottom_diagram"
+       transform="translate(-7.9375005)"
+       inkscape:export-filename="workingTree.png"
+       inkscape:export-xdpi="199"
+       inkscape:export-ydpi="199">
+      <g
+         id="g7-1"
+         transform="translate(-17.712054,97.973925)"
+         style="display:inline">
+        <rect
+           style="display:inline;fill:#21436c;fill-opacity:1;stroke:none;stroke-width:0.632278;stroke-linecap:square;paint-order:fill markers stroke"
+           id="rect1-8-1-3-6-7-6-0"
+           width="25"
+           height="9"
+           x="70.070694"
+           y="82.983894"
+           ry="0.89368904"
+           transform="translate(0,-0.63115021)" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;display:inline;stroke-width:0.264583"
+           x="80.730545"
+           y="186.34183"
+           id="text1-52"
+           inkscape:label="text1-52"
+           transform="translate(1.8370487,-97.973925)"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="80.730545"
+             y="186.34183"
+             id="tspan2-6">Untracked</tspan></text>
+      </g>
+      <g
+         id="g5-1"
+         transform="translate(-4.5193505,95.724691)"
+         style="display:inline">
+        <rect
+           style="display:inline;fill:#21436c;fill-opacity:1;stroke:none;stroke-width:0.632278;stroke-linecap:square;paint-order:fill markers stroke"
+           id="rect1-8-1-3-6-7-6-8"
+           width="25"
+           height="9"
+           x="128.60031"
+           y="84.601974"
+           ry="0.89368904" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="141.09412"
+           y="90.630569"
+           id="text1-2-2"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="141.09412"
+             y="90.630569"
+             id="tspan2-3-2">Modified</tspan></text>
+      </g>
+      <g
+         id="g4-2"
+         transform="translate(3.4546181,96.781176)"
+         style="display:inline">
+        <rect
+           style="display:inline;fill:#21436c;fill-opacity:1;stroke:none;stroke-width:0.632278;stroke-linecap:square;paint-order:fill markers stroke"
+           id="rect1-8-1-3-6-7-6-6"
+           width="25"
+           height="9"
+           x="156.4875"
+           y="83.545494"
+           ry="0.89368904" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.02368"
+           y="89.163773"
+           id="text1-2-3-6"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="169.02368"
+             y="89.163773"
+             id="tspan2-3-7-5">Staged</tspan></text>
+      </g>
+      <g
+         id="g6-7"
+         transform="translate(-12.291903,96.874154)"
+         style="display:inline">
+        <rect
+           style="fill:#21436c;fill-opacity:1;stroke:none;stroke-width:0.632278;stroke-linecap:square;paint-order:fill markers stroke"
+           id="rect1-8-1-3-6-7-6"
+           width="25"
+           height="9"
+           x="100.5117"
+           y="83.452515"
+           ry="0.89368904" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="113.00861"
+           y="89.481102"
+           id="text1-7-1"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="113.00861"
+             y="89.481102"
+             id="tspan2-5-9">Unmodified</tspan></text>
+      </g>
+      <g
+         id="g3"
+         inkscape:label="reference arrow"
+         transform="translate(7.1496675,18.778645)"
+         style="display:none">
+        <path
+           id="path10-2-8-2"
+           transform="matrix(1.58958,0,0,1.5688512,-318.11465,-25.346267)"
+           inkscape:transform-center-x="0.96522167"
+           d="m 259.80536,156.39159 3.36787,-1.94444 v 4.2069 l -3.36787,-1.94444 a 0.18360983,0.18360983 90 0 1 0,-0.31802 z"
+           style="display:inline;fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
+           inkscape:path-effect="#path-effect14-5-6-4"
+           inkscape:original-d="m 259.52995,156.5506 3.64328,-2.10345 v 4.2069 z" />
+        <rect
+           style="display:inline;fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.654977;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+           id="rect9-0-4"
+           width="64.038017"
+           height="6.5999999"
+           x="192.50806"
+           y="127.22019"
+           transform="translate(-92.287822,89.738134)" />
+      </g>
+      <path
+         style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2, 0.5;stroke-opacity:1;stroke-dashoffset:0"
+         d="M 56.921135,189.32667 V 237.3219"
+         id="path9-1-7"
+         transform="translate(7.9375005)"
+         inkscape:export-filename="workingTree.png"
+         inkscape:export-xdpi="199"
+         inkscape:export-ydpi="199" />
+      <path
+         style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2, 0.5;stroke-opacity:1;stroke-dashoffset:0"
+         d="M 92.7823,189.32667 V 237.3219"
+         id="path9-1-7-8"
+         transform="translate(7.9375005)" />
+      <path
+         style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2, 0.5;stroke-opacity:1;stroke-dashoffset:0"
+         d="M 164.50465,189.32667 V 237.3219"
+         id="path9-1-7-9"
+         transform="translate(7.9375005)" />
+      <path
+         style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2, 0.5;stroke-opacity:1;stroke-dashoffset:0"
+         d="M 128.64346,189.32667 V 237.3219"
+         id="path9-1-7-3"
+         transform="translate(7.9375005)" />
+      <g
+         id="g15-3"
+         transform="translate(-128.47665,81.217621)"
+         style="display:inline"
+         inkscape:label="arrow">
+        <path
+           id="path10-2"
+           style="fill:#ff703f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
+           inkscape:transform-center-x="0.96522167"
+           d="M 263.17325 154.44721 L 259.80526 156.3916 A 0.18360983 0.18360983 0 0 0 259.80526 156.70946 L 263.17325 158.65418 L 280.98357 158.65418 L 280.98357 154.44721 L 263.17325 154.44721 z "
+           transform="matrix(1.58958,0,0,1.5688512,-218.72102,-105.31341)" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
+           x="198.19466"
+           y="141.66751"
+           id="text9"><tspan
+             sodipodi:role="line"
+             id="tspan9"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="198.19466"
+             y="141.66751">Remove file</tspan></text>
+      </g>
+      <g
+         id="g15-3-3"
+         transform="translate(-92.287823,89.738133)"
+         style="display:inline"
+         inkscape:label="arrow">
+        <path
+           id="path10-2-8"
+           style="fill:#ff703f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
+           inkscape:transform-center-x="0.96522167"
+           d="M 263.17336 154.44715 L 259.80538 156.39154 A 0.18360983 0.18360983 0 0 0 259.80538 156.70973 L 263.17336 158.65412 L 303.45944 158.65412 L 303.45944 154.44715 L 263.17336 154.44715 z "
+           transform="matrix(1.58958,0,0,1.5688512,-218.72102,-105.31341)" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
+           x="218.70638"
+           y="141.92525"
+           id="text9-1"><tspan
+             sodipodi:role="line"
+             id="tspan9-2"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="218.70638"
+             y="141.92525">Commit file</tspan></text>
+      </g>
+      <g
+         id="g15-3-0"
+         transform="translate(-105.86927,56.630653)"
+         style="display:inline"
+         inkscape:label="arrow">
+        <path
+           id="path10-2-9"
+           style="fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
+           inkscape:transform-center-x="-0.96522523"
+           inkscape:transform-center-y="-3.3414399e-06"
+           d="M 325.98585 158.65412 L 325.98585 154.44715 L 263.1733 154.44715 L 259.80531 156.39154 A 0.18360983 0.18360983 0 0 0 259.80531 156.70973 L 263.1733 158.65412 L 325.98585 158.65412 z "
+           transform="matrix(-1.58958,0,0,-1.5688512,690.1156,384.92121)" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
+           x="212.87895"
+           y="140.95068"
+           id="text9-3"><tspan
+             sodipodi:role="line"
+             id="tspan9-7"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="212.87895"
+             y="140.95068">Add file</tspan></text>
+      </g>
+      <g
+         id="g15-3-0-6"
+         transform="translate(-70.409302,65.151159)"
+         style="display:inline"
+         inkscape:label="arrow">
+        <path
+           id="path10-2-9-0"
+           style="fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
+           inkscape:transform-center-x="-0.96522523"
+           inkscape:transform-center-y="-3.3414399e-06"
+           d="M 281.15474 158.65419 L 281.15474 154.44722 L 263.17309 154.44722 L 259.80543 156.39161 A 0.18360983 0.18360983 0 0 0 259.80543 156.70947 L 263.17309 158.65419 L 281.15474 158.65419 z "
+           transform="matrix(-1.58958,0,0,-1.5688512,618.85284,384.92122)" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
+           x="174.76054"
+           y="140.95068"
+           id="text9-3-1"><tspan
+             sodipodi:role="line"
+             id="tspan9-7-7"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="174.76054"
+             y="140.95068">Edit file</tspan></text>
+      </g>
+      <g
+         id="g15-3-0-6-5"
+         transform="translate(-34.322566,73.671672)"
+         style="display:inline"
+         inkscape:label="arrow">
+        <path
+           id="path10-2-9-0-9"
+           style="fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
+           inkscape:transform-center-x="-0.96522523"
+           inkscape:transform-center-y="-3.3414399e-06"
+           d="M 281.15445 158.65392 L 281.15445 154.44728 L 263.17312 154.44728 L 259.80547 156.39167 A 0.18360983 0.18360983 0 0 0 259.80547 156.70953 L 263.17312 158.65392 L 281.15445 158.65392 z "
+           transform="matrix(-1.58958,0,0,-1.5688512,618.85284,384.92122)" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
+           x="173.55193"
+           y="140.59085"
+           id="text9-3-1-8"><tspan
+             sodipodi:role="line"
+             id="tspan9-7-7-1"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+             x="173.55193"
+             y="140.59085">Stage file</tspan></text>
+      </g>
+    </g>
     <g
        id="g1"
        inkscape:label="Top_diagram"
@@ -589,24 +876,6 @@
              x="54.149967"
              y="89.438721">Stash</tspan></text>
       </g>
-      <path
-         style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2, 0.5;stroke-opacity:1;stroke-dashoffset:0"
-         d="M 56.921135,189.32667 V 237.3219"
-         id="path9-1-7"
-         transform="translate(0,-5.2916669)"
-         inkscape:export-filename="workingTree.png"
-         inkscape:export-xdpi="199"
-         inkscape:export-ydpi="199" />
-      <path
-         style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2, 0.5;stroke-opacity:1;stroke-dashoffset:0"
-         d="M 92.7823,189.32667 V 237.3219"
-         id="path9-1-7-8"
-         transform="translate(0,-5.2916669)" />
-      <path
-         style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2, 0.5;stroke-opacity:1;stroke-dashoffset:0"
-         d="M 164.50465,189.32667 V 237.3219"
-         id="path9-1-7-9"
-         transform="translate(0,-5.2916669)" />
       <path
          style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.424797;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.27439, 0.424797;stroke-dashoffset:0;stroke-opacity:1"
          d="M 165.34244,70.063846 V 104.70731"
@@ -787,278 +1056,6 @@
            style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffaf3f;fill-opacity:1;stroke:#db8c1d;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
            x="144.44989"
            y="70.964294">fetch</tspan></text>
-    </g>
-    <g
-       id="g2"
-       inkscape:label="Bottom_diagram"
-       transform="translate(-7.9375004)">
-      <g
-         id="g7-1"
-         transform="translate(-17.712054,97.973925)"
-         style="display:inline">
-        <rect
-           style="display:inline;fill:#21436c;fill-opacity:1;stroke:none;stroke-width:0.632278;stroke-linecap:square;paint-order:fill markers stroke"
-           id="rect1-8-1-3-6-7-6-0"
-           width="25"
-           height="9"
-           x="70.070694"
-           y="82.983894"
-           ry="0.89368904"
-           transform="translate(0,-0.63115021)" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;display:inline;stroke-width:0.264583"
-           x="80.730545"
-           y="186.34183"
-           id="text1-52"
-           inkscape:label="text1-52"
-           transform="translate(1.8370487,-97.973925)"><tspan
-             sodipodi:role="line"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="80.730545"
-             y="186.34183"
-             id="tspan2-6">Untracked</tspan></text>
-      </g>
-      <g
-         id="g5-1"
-         transform="translate(-4.5193505,95.724691)"
-         style="display:inline">
-        <rect
-           style="display:inline;fill:#21436c;fill-opacity:1;stroke:none;stroke-width:0.632278;stroke-linecap:square;paint-order:fill markers stroke"
-           id="rect1-8-1-3-6-7-6-8"
-           width="25"
-           height="9"
-           x="128.60031"
-           y="84.601974"
-           ry="0.89368904" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;stroke-width:0.264583"
-           x="141.09412"
-           y="90.630569"
-           id="text1-2-2"><tspan
-             sodipodi:role="line"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="141.09412"
-             y="90.630569"
-             id="tspan2-3-2">Modified</tspan></text>
-      </g>
-      <g
-         id="g4-2"
-         transform="translate(3.4546181,96.781176)"
-         style="display:inline">
-        <rect
-           style="display:inline;fill:#21436c;fill-opacity:1;stroke:none;stroke-width:0.632278;stroke-linecap:square;paint-order:fill markers stroke"
-           id="rect1-8-1-3-6-7-6-6"
-           width="25"
-           height="9"
-           x="156.4875"
-           y="83.545494"
-           ry="0.89368904" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;stroke-width:0.264583"
-           x="169.02368"
-           y="89.163773"
-           id="text1-2-3-6"><tspan
-             sodipodi:role="line"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="169.02368"
-             y="89.163773"
-             id="tspan2-3-7-5">Staged</tspan></text>
-      </g>
-      <g
-         id="g6-7"
-         transform="translate(-12.291903,96.874154)"
-         style="display:inline">
-        <rect
-           style="fill:#21436c;fill-opacity:1;stroke:none;stroke-width:0.632278;stroke-linecap:square;paint-order:fill markers stroke"
-           id="rect1-8-1-3-6-7-6"
-           width="25"
-           height="9"
-           x="100.5117"
-           y="83.452515"
-           ry="0.89368904" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;stroke-width:0.264583"
-           x="113.00861"
-           y="89.481102"
-           id="text1-7-1"><tspan
-             sodipodi:role="line"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:0.95;font-family:Inter;-inkscape-font-specification:'Inter Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="113.00861"
-             y="89.481102"
-             id="tspan2-5-9">Unmodified</tspan></text>
-      </g>
-      <g
-         id="g15-3"
-         transform="translate(-128.47665,81.217621)"
-         style="display:inline"
-         inkscape:label="arrow">
-        <path
-           id="path10-2"
-           transform="matrix(1.58958,0,0,1.5688512,-218.72102,-105.31341)"
-           inkscape:transform-center-x="0.96522167"
-           d="m 259.80536,156.39159 3.36787,-1.94444 v 4.2069 l -3.36787,-1.94444 a 0.18360983,0.18360983 90 0 1 0,-0.31802 z"
-           style="fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
-           inkscape:path-effect="#path-effect14-5"
-           inkscape:original-d="m 259.52995,156.5506 3.64328,-2.10345 v 4.2069 z" />
-        <rect
-           style="opacity:1;fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.435498;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-           id="rect9"
-           width="28.311218"
-           height="6.5999999"
-           x="199.61386"
-           y="136.99118" />
-        <text
-           xml:space="preserve"
-           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
-           x="198.19466"
-           y="141.66751"
-           id="text9"><tspan
-             sodipodi:role="line"
-             id="tspan9"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="198.19466"
-             y="141.66751">Remove file</tspan></text>
-      </g>
-      <g
-         id="g15-3-3"
-         transform="translate(-92.287823,89.738133)"
-         style="display:inline"
-         inkscape:label="arrow">
-        <path
-           id="path10-2-8"
-           transform="matrix(1.58958,0,0,1.5688512,-218.72102,-105.31341)"
-           inkscape:transform-center-x="0.96522167"
-           d="m 259.80536,156.39159 3.36787,-1.94444 v 4.2069 l -3.36787,-1.94444 a 0.18360983,0.18360983 90 0 1 0,-0.31802 z"
-           style="fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
-           inkscape:path-effect="#path-effect14-5-6"
-           inkscape:original-d="m 259.52995,156.5506 3.64328,-2.10345 v 4.2069 z" />
-        <rect
-           style="opacity:1;fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.654977;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-           id="rect9-0"
-           width="64.038017"
-           height="6.5999999"
-           x="199.61386"
-           y="136.99118" />
-        <text
-           xml:space="preserve"
-           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
-           x="218.70638"
-           y="141.92525"
-           id="text9-1"><tspan
-             sodipodi:role="line"
-             id="tspan9-2"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="218.70638"
-             y="141.92525">Commit file</tspan></text>
-      </g>
-      <g
-         id="g15-3-0"
-         transform="translate(-105.86927,56.630653)"
-         style="display:inline"
-         inkscape:label="arrow">
-        <path
-           id="path10-2-9"
-           transform="matrix(-1.58958,0,0,-1.5688512,690.1156,384.92121)"
-           inkscape:transform-center-x="-0.96522523"
-           d="m 259.80536,156.39159 3.36787,-1.94444 v 4.2069 l -3.36787,-1.94444 a 0.18360983,0.18360983 90 0 1 0,-0.31802 z"
-           style="fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
-           inkscape:path-effect="#path-effect14-5-5"
-           inkscape:original-d="m 259.52995,156.5506 3.64328,-2.10345 v 4.2069 z"
-           inkscape:transform-center-y="-3.3414399e-06" />
-        <rect
-           style="opacity:1;fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.817845;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-           id="rect9-7"
-           width="99.845581"
-           height="6.5999999"
-           x="171.93512"
-           y="136.01662" />
-        <text
-           xml:space="preserve"
-           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
-           x="212.87895"
-           y="140.95068"
-           id="text9-3"><tspan
-             sodipodi:role="line"
-             id="tspan9-7"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="212.87895"
-             y="140.95068">Add file</tspan></text>
-      </g>
-      <g
-         id="g15-3-0-6"
-         transform="translate(-70.409302,65.151159)"
-         style="display:inline"
-         inkscape:label="arrow">
-        <path
-           id="path10-2-9-0"
-           transform="matrix(-1.58958,0,0,-1.5688512,618.85284,384.92122)"
-           inkscape:transform-center-x="-0.96522523"
-           d="m 259.80536,156.39159 3.36787,-1.94444 v 4.2069 l -3.36787,-1.94444 a 0.18360983,0.18360983 90 0 1 0,-0.31802 z"
-           style="fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
-           inkscape:path-effect="#path-effect14-5-5-0"
-           inkscape:original-d="m 259.52995,156.5506 3.64328,-2.10345 v 4.2069 z"
-           inkscape:transform-center-y="-3.3414399e-06" />
-        <rect
-           style="opacity:1;fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.437582;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-           id="rect9-7-7"
-           width="28.582817"
-           height="6.5999999"
-           x="171.93512"
-           y="136.01662" />
-        <text
-           xml:space="preserve"
-           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
-           x="174.76054"
-           y="140.95068"
-           id="text9-3-1"><tspan
-             sodipodi:role="line"
-             id="tspan9-7-7"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="174.76054"
-             y="140.95068">Edit file</tspan></text>
-      </g>
-      <g
-         id="g15-3-0-6-5"
-         transform="translate(-34.322566,73.671672)"
-         style="display:inline"
-         inkscape:label="arrow">
-        <path
-           id="path10-2-9-0-9"
-           transform="matrix(-1.58958,0,0,-1.5688512,618.85284,384.92122)"
-           inkscape:transform-center-x="-0.96522523"
-           d="m 259.80536,156.39159 3.36787,-1.94444 v 4.2069 l -3.36787,-1.94444 a 0.18360983,0.18360983 90 0 1 0,-0.31802 z"
-           style="fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:square;paint-order:fill markers stroke"
-           inkscape:path-effect="#path-effect14-5-5-0-7"
-           inkscape:original-d="m 259.52995,156.5506 3.64328,-2.10345 v 4.2069 z"
-           inkscape:transform-center-y="-3.3414399e-06" />
-        <rect
-           style="opacity:1;fill:#ffaf3f;fill-opacity:1;stroke:none;stroke-width:0.437582;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-           id="rect9-7-7-9"
-           width="28.582817"
-           height="6.5999999"
-           x="171.93512"
-           y="136.01662" />
-        <text
-           xml:space="preserve"
-           style="font-size:4.23333px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';display:inline;stroke-width:0.264583"
-           x="173.55193"
-           y="140.59085"
-           id="text9-3-1-8"><tspan
-             sodipodi:role="line"
-             id="tspan9-7-7-1"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.23333px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Semi-Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-             x="173.55193"
-             y="140.59085">Stage file</tspan></text>
-      </g>
-      <path
-         style="display:inline;fill:none;stroke:#a6a6a6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2, 0.5;stroke-opacity:1;stroke-dashoffset:0"
-         d="M 128.64346,189.32667 V 237.3219"
-         id="path9-1-7-3"
-         transform="translate(7.9375004)" />
     </g>
   </g>
 </svg>
