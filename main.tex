@@ -38,7 +38,9 @@
 \linespread{1.1} %space between lines
 \renewcommand{\textendash}{\rule[0.5ex]{1.2em}{0.5pt}}
 
+% --------------------------------
 % --- Header & Footer settings ---
+% --------------------------------
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[C]{\slshape \leftmark}
@@ -63,7 +65,7 @@
         \end{tikzpicture}
    }               % code executed before title
       
-\titlespacing*{\chapter}{3cm}{1.5cm}{-1cm}
+\titlespacing*{\chapter}{2.2cm}{1.5cm}{-1cm}
 
 % --- Hook to place TikZ overlay on chapter page ---
 \newcommand{\chapteroverlay}{
@@ -82,8 +84,12 @@
     \draw[line width=4pt, color=orange] ($(chref) + (2cm,0)$) -- ++(0,-4.15cm) coordinate (linend);
 
   \end{tikzpicture}%
-  \vspace*{2cm}
+  \vspace*{1.4cm}
+  \newline %we need the new line otherwise text starts on the title line for some reason
 }
+% ---------------------------
+% --- Header & Footer END ---
+% ---------------------------
 
 % --- Hyperref customization ---
 \hypersetup{
@@ -115,13 +121,12 @@
 
 \include{Chapters/Ch1 - Creation}
 \include{Chapters/Ch2 - The Bascis}
-\include{Chapters/Ch3 - Branch}
-\include{Chapters/Ch4 - Merging}
-\include{Chapters/Ch4.1 - Solving Conflicts}
-\include{Chapters/Ch5 - Rebasing}
+\include{Chapters/Ch3 - Working with remotes}
+\include{Chapters/Ch4 - Branch Management}
+\include{Chapters/Ch5 - Branch Integration}
 \include{Chapters/Ch6 - Solving Conflicts}
-\include{Chapters/Ch7 - Fetch & Pull}
-\include{Chapters/Ch8 - Tracking Path Changes}
+\include{Chapters/Ch7 - Tracking Path Changes}
+\include{Chapters/Ch8 - Git Configurations}
 
 \begingroup
 \titleformat{\chapter}[block]{\normalfont\Huge\bfseries}{}{}{}
