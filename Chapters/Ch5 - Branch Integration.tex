@@ -46,7 +46,7 @@ Why would you do this though?
 
 \begin{tcolorbox}[infoBox]
         \textcolor{red}{\textbf{NOTE}}: Do not rebase commits that exist outside your repository and that people may have based work on.
-    \end{tcolorbox}
+\end{tcolorbox}
 
 Think of git rebase as lifting your commits off your current branch and then replaying them one by one on top of a new base (in our case, the updated main).
 
@@ -83,3 +83,10 @@ must be used afterwards, because the new commit history is different than the on
 \begin{gitBashBox}
 git rebase -i <commit hash>    
 \end{gitBashBox}
+
+\begin{tcolorbox}[infoBox]
+        \textcolor{red}{\textbf{NOTE}}: This is not to be confused with \gitinline{git pull --rebase}! Generally when you are working on a branch with someone else and they
+have changes you need to pull, and your changes haven't been pushed yet, this is the way to go!
+\end{tcolorbox}
+
+

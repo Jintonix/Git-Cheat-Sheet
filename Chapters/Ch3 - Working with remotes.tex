@@ -1,26 +1,71 @@
 \chapter{Working with Remotes}
 \chapteroverlay
 
-% maybe make this chapter 3? Have this come after commit
 \section{Remotes}
-- What is a remote: 
-- showing Remotes
-- adding remotes + shortname
-\section{Fetch \& Pull}
-git fetch updates your local repository’s knowledge of the remote, not your working branch.\\
-fetch -> make sure your local Git knows about the latest main on the server.\\
+Remote repositories are versions of your project that are hosted on the Internet or network somewhere.
+They are used for collaboration and backups.
 
-Git pull syntax:\\
-git pull <remote> <branch>
-\\
-For pulling into a branch while on a different branch:\\
-git fetch origin main:main\\
-git fetch <remote> <src>:<dst>\\
-- <remote> → which remote to fetch from (e.g. origin).
+\noindent\gitinline{git remote} shows you which remote server you have configured.
 
-- <src> → branch (or ref) on the remote.
+\noindent Add a remote repository with: \gitinline{git remote add <shortname> <url>}
 
-- <dst> → branch (or ref) in your local repo to update.
+\noindent Using \gitinline{git remote show <remote>} will give you more information.
+
+\noindent If you need to remove a remote use: \gitinline{git remote rm}.
+
+\section{SSH-Key and other Authentication Methods}
+
+\textcolor{red}{WIP}
 
 \section{push}
+Now that you have made some changes to your local repository. You may want to share it with others.
+\begin{gitBashBox}
+push <remote> <branch>
+\end{gitBashBox}
+This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime.
+\section{Fetch \& Pull}
+git fetch updates your local repository's knowledge of the remote, not your working branch.\\
+fetch -> make sure your local Git knows about the latest main on the server.\\
+
+\begin{gitBashBox}
+fetch <remote>
+\end{gitBashBox}
+
+\noindent The command\footnote{using the <shortnamw> in lieu of the <remote> works as well} goes out to that remote project and pulls down all the data from that remote project that you 
+don't have yet. After you do this, you should have references to all the branches from that remote, which you can merge in or inspect at any time.
+
+It's important to note that the git fetch command only downloads the data to your local repository--it doesn't automatically merge it with any of your work or modify what you're currently working on. You have to merge it manually into your work when you're ready.
+
+\begin{gitBashBox}
+pull
+\end{gitBashBox}
+to automatically fetch and then merge that remote branch into your current branch.it does \gitinline{git fetch} + \gitinline{git merge_remote} in one command.
+
+
+For pulling into a branch while on a different branch: \gitinline{git fetch <remote> <src>:<dst>}
+\begin{enumerate}
+    \item <remote> → which remote to fetch from (e.g. origin).
+    \item <src> → branch (or ref) on the remote.
+    \item <dst> → branch (or ref) in your local repo to update.
+\end{enumerate}
+
 \section{Renaming and Removing Remotes}
+
+\section{Pulling an existing remote branch}
+Instead of running \gitinline{git checkout -b <branch> <remote>/<branch>} you can do:
+\begin{gitBashBox}
+git checkout --track <remote>/<branch>
+\end{gitBashBox}
+Question? does git cehckout remote/branch also automatically track remote branches if they exist?
+
+\gitinline{git branch -u origin/serverfix} sets/changes the upstream of a branch.
+
+If you want to see what tracking branches you have set up, you can use the \gitinline{-vv} option to git branch. 
+
+
+It’s important to note that these numbers are only since the last time you fetched from each server. This command does not reach out to the servers, it’s telling you about what it has cached from these servers locally. If you want totally up to date ahead and behind numbers, you’ll need to fetch from all your remotes right before running this. You could do that like this:
+
+\gitinline{git fetch --all; git branch -vv}
+
+\section{Deleting a remote branch}
+\gitinline{git push origin --delete serverfix}
