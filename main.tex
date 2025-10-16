@@ -50,8 +50,8 @@
 \fancypagestyle{plain}{
     \fancyhf{} % clear all footer & header fields
     \renewcommand{\headrulewidth}{0pt}
-    \fancyfoot[CE,CO]{\textbf{\textendash} \textbf{\thepage} \textbf{\textendash}}
-    \fancyfoot[RO,RE]{J. A. Schneider}
+    %\fancyfoot[CE,CO]{\textbf{\textendash} \textbf{\thepage} \textbf{\textendash}}
+    \fancyfoot[LO,LE]{J. A. Schneider}
 }
 
 % --- Chapter format ---
@@ -67,7 +67,7 @@
       
 \titlespacing*{\chapter}{2.2cm}{1.5cm}{-1cm}
 
-% --- Hook to place TikZ overlay on chapter page ---
+% --- Hook to place TikZ overlay on Header ---
 \newcommand{\chapteroverlay}{
   \begin{tikzpicture}[remember picture,overlay]
     \coordinate (chref) at ($(current page.north west) + (2cm,-2cm)$);
@@ -83,10 +83,29 @@
     % Vertical line
     \draw[line width=4pt, color=orange] ($(chref) + (2cm,0)$) -- ++(0,-4.15cm) coordinate (linend);
 
-  \end{tikzpicture}%
+  \end{tikzpicture}
   \vspace*{1.4cm}
   \newline %we need the new line otherwise text starts on the title line for some reason
 }
+
+% --- Hook to place TikZ overlay on Footer ---
+\newcommand{\chapterunderlay}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \coordinate (dhref) at ($(current page.south east) + (-1cm,0cm)$);  
+    
+    % Footer banner
+    \node[anchor=south east] at ($(current page.south east)+ (1cm,2cm)$ )
+      {\includegraphics[scale=1.3]{Images/footer_v3}};
+
+    % Page number
+    \node[anchor=north west] (pgnum) at ($(dhref) + (-7cm,3.2cm)$)
+      {\huge\color{yellow!81!red} \textbf\thepage};
+
+    % Vertical line
+    \draw[line width=3pt, color=yellow!81!red] ($(dhref) + (-6.0cm,1.2cm)$) -- ++(1cm,3cm) coordinate (linend);
+  \end{tikzpicture}
+}
+
 % ---------------------------
 % --- Header & Footer END ---
 % ---------------------------
@@ -132,8 +151,8 @@
 \titleformat{\chapter}[block]{\normalfont\Huge\bfseries}{}{}{}
 \titlespacing{\chapter}{0pt}{0pt}{0pt}
 \appendix
-\include{Chapters/Appendix A - Command List}
-\include{Chapters/Appendix B - Glossary}
+% \include{Chapters/Appendix A - Command List}
+% \include{Chapters/Appendix B - Glossary}
 \endgroup
 \end{document}
 
